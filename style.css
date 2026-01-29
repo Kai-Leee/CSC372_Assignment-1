@@ -1,0 +1,69 @@
+body {
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+
+    background-image: url("img/korea-background.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: top left;
+    background-size: 300px 600px;
+}
+
+a {
+    color: #A4A400;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #A4A400;
+}
+
+h2, h3, h4, h5, h6 {
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+    text-decoration: underline;
+    color: #A4A400;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #FFFFA8;
+    margin-left: 40px;
+    padding: 10px;
+}
+
+#tooltip li {
+    position: relative;
+    cursor: help;
+}
+
+#tooltip li::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 10pt;
+    top: 13pt;
+
+    background-color: gray;
+    color: whitesmoke;
+    font-style: italic;
+
+    padding: 8px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in-out;
+    z-index: 10;
+}
+
+#tooltip li:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
